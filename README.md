@@ -67,14 +67,33 @@ This modular, agent-based approach aligns well with our vision of building a sca
 1. **Register/Login**
    - Users create an account or log in, storing their name, risk tolerance, and any relevant preferences.
    - Authentication is handled via JWT tokens for secure access.
+
+![Landing Page](Screenshots/Landing-Page.png)
+
+![Whats Users Name](Screenshots/Ask-Users-Name.png)
+
+![Login-Register](Screenshots/Login-Register.png)
+
+![Register Successfully](Screenshots/Registered-Successfully.png)
+
 2. **Provide Portfolio Data**
    - Users input their holdings (symbol, quantity, purchase price).
    - The system fetches the latest market data on demand.
+
+![Dashboard](Screenshots/Dashboard-1.png)
+
+![Stock Holdings Entered](Screenshots/Dashboard-2.png)
+
 3. **Run Pipeline**
    - A single “Optimize Portfolio” action triggers the agentic pipeline:
      1. Collects fresh market data.
      2. Analyzes current holdings (profit/loss, risk).
      3. Optimizes based on user risk tolerance, goals, and LLM suggestions.
      4. Generates a comprehensive report.
+   
+![Run Pipeline](Screenshots/Generated-Report.png)
+
 4. **Download Report**
    - Users receive a PDF or HTML summary detailing the portfolio’s performance, recommended changes, and rationale.
+
+![Final Report](Screenshots/Output-Report.png)

@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+sqlalchemy
+yfinance
+openai
+reportlab
+pydantic
+python-jose
+passlib
+python-dotenv
+bcrypt
+langchain_community

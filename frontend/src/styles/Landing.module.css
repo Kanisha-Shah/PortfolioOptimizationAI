@@ -1,0 +1,25 @@
+.hero {
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+    url("./images/Landing-Page.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.heroContent {
+  max-width: 600px;
+}
+
+.getStartedButton {
+  margin-top: 30rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #ff9800;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -1,0 +1,207 @@
+/* 
+  A container with a blurred background using a pseudo-element. 
+  The main content sits above this blurred layer.
+*/
+.dashboardContainer {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 2rem;
+  color: #333; /* Changed to a darker text color for better contrast */
+}
+
+/* The blurred background layer */
+.dashboardContainer::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  z-index: -1; 
+  background: url("./images/Dashboard-Page.jpg") no-repeat center center;
+  background-size: cover;
+  filter: blur(8px); /* Adjust blur radius as desired */
+  opacity: 0.8;      /* Slight transparency for a softer look */
+}
+
+/* Center the main heading; position the logout button to the right. */
+.header {
+  display: flex;
+  justify-content: center; /* Center the heading horizontally */
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+/* Larger, bolder heading for the dashboard */
+.header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: black; /* White text for contrast against blurred bg */
+}
+
+/* Position the logout button absolutely on the right side */
+.logoutButton {
+  position: absolute;
+  right: 0;
+  background-color: #dc3545;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.removeButton {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.removeButton:hover {
+  background-color: #c12c3d;
+}
+
+.logoutButton:hover {
+  background-color: #c12c3d;
+  transform: scale(1.03);
+}
+
+/* Content container: 
+   Left: Previous Holdings table 
+   Right: Form for adding/updating holdings 
+*/
+.content {
+  display: flex;
+  gap: 2rem; /* Space between left and right sections */
+}
+
+/* Previous Holdings Section */
+.previousHoldings {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Table for previous holdings */
+.previousHoldings table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.previousHoldings th,
+.previousHoldings td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+/* Right side form container */
+.holdingsForm {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Title for the holdings form */
+.holdingsForm h3 {
+  margin-top: 5;
+}
+
+/* Spacing for each input group */
+.formGroup {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.formGroup label {
+  margin-top: 1rem; /* Space between label and the input/textarea */
+  font-weight: 500;
+  padding: 3px;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Inputs and textareas get consistent styling */
+
+.holdingsForm input {
+  margin-right: 1rem; /* Space between each input horizontally */
+  margin-bottom: 0.5rem; /* Slight vertical space if inputs wrap */
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.holdingsForm select,
+.holdingsForm textarea {
+  margin-bottom: 0.5rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* On focus, highlight the border */
+.holdingsForm input:focus,
+.holdingsForm select:focus,
+.holdingsForm textarea:focus {
+  border-color: #999;
+}
+
+/* The button to add a new holding and the submit button */
+.holdingsForm button {
+  background-color: #00879E;
+  color: #fff;
+  border: none;
+  margin-right: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.holdingsForm button:hover {
+  background-color: #FFAB5B;
+  transform: scale(1.03);
+}
+
+/* Status message (e.g., "Pipeline executed successfully.") */
+.statusMessage {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* PDF Download link styling */
+.pdfLink {
+  margin-top: 1rem;
+  display: inline-block;
+  background-color: #4F959D;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pdfLink:hover {
+  background-color: #27391C;
+  transform: scale(1.03);
+}
+
