@@ -8,6 +8,8 @@ The Portfolio Optimization AI Agent will:
 - **Simulate portfolio performance under different market conditions**
 - **Support user-specific investment goals (growth, income, diversification, risk mitigation)**
 
+![Agents Interacting](Screenshots/AI-Agents-Portfolio-Analysis.png)
+
 This modular, agent-based approach aligns well with our vision of building a scalable and evolving system. Each agent has a single responsibility and is triggered in a sequence, ensuring that data is processed step by step.
 
 ![Overview](Screenshots/Overview.svg)
